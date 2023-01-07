@@ -244,18 +244,18 @@
           <div class="col-md-8">
             <h3 class="line-bottom mt-0 mb-20">Interested in discussing?</h3>
             <!-- Contact Form -->
-            <form id="contact_form" name="contact_form" class="form-transparent" action="http://html.kodesolution.live/s/studypress/v6.0/demo/includes/sendmail.php" method="post">
+            <form id="contact_form" name="contact_form" class="form-transparent contact-form" action="" method="post">
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label for="form_name">Name <small>*</small></label>
-                    <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                    <input name="form_name" id ="name" class="form-control" type="text" placeholder="Enter Name" required="">
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label for="form_email">Email <small>*</small></label>
-                    <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                    <input name="form_email" id="email" class="form-control required email" type="email" placeholder="Enter Email">
                   </div>
                 </div>
               </div>
@@ -263,19 +263,19 @@
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label for="form_name">Subject <small>*</small></label>
-                    <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
+                    <input name="form_subject" id="subject" class="form-control required" type="text" placeholder="Enter Subject">
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label for="form_phone">Phone</label>
-                    <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                    <input name="form_phone" id="phone" class="form-control" type="text" placeholder="Enter Phone">
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="form_name">Message</label>
-                <textarea name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+                <textarea name="form_message" id="message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
               </div>
               <div class="form-group">
                 <input name="form_botcheck" class="form-control" type="hidden" value="" />
@@ -287,6 +287,60 @@
             <script type="text/javascript">
               $("#contact_form").validate({
                 submitHandler: function(form) {
+
+                  var email = $('#email').val();
+                  var name = $('#name').val();
+                  var phone = $('#phone').val();
+                  var subject = $('#subject').val();
+                  var message = $('#message').val();
+var dataForm= {name, email, phone, course:"Subject - "+subject, message};
+console.log(data);
+var data = {
+      service_id: 'service_5pvkjq7', 
+      template_id: 'template_4662gv1',
+      user_id: 'F3-OztEqluIc7vsw9',
+      template_params: {
+        name, email, phone, course:"Subject - "+subject, message,
+          'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
+      }
+  };
+  console.log(data);
+    // console.log("isValidEmail", isValidEmail, "userEmail", userEmail);
+    // return
+   fetch('https://api.emailjs.com/api/v1.0/email/send', {
+     method: 'POST',
+     body: JSON.stringify(data),
+     headers: {
+       'Accept': 'application/json',
+       'Content-Type': 'application/json'
+     },
+   }).then(function() {
+ 
+                      $(form).find('.form-control').val('');
+           
+                      form_btn.prop('disabled', false).html("submir");
+                      $(form_result_div).html("Thanks, We will connect you soon!").fadeIn('slow');
+                      setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                 
+   }).then(function(error) {
+   });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   var form_btn = $(form).find('button[type="submit"]');
                   var form_result_div = '#form-result';
                   $(form_result_div).remove();

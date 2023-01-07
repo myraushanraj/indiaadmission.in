@@ -6472,3 +6472,6 @@ blockquote p {
 .enquiry-form-details{
   top: 16px !important;
 }
+.contact-form input{
+  color: #000 !important;
+}
