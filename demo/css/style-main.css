@@ -3187,7 +3187,7 @@ textarea {
 .service-block {
   margin: 0 auto 30px;
   /* max-width: 400px; */
-  height: 408px;
+
 }
 .service-block:hover .thumb .desc {
   bottom: 0;
@@ -3218,7 +3218,6 @@ textarea {
 .service-block .content {
   border: 1px solid #eeeeee;
   /*padding: 12px 20px 20px; */
-  height: 408px;
 }
 /*
  * shop.less
@@ -6458,4 +6457,18 @@ blockquote p {
 
 .fa-whatsapp:before {
   color: #4caf50 !important;
+}
+.slider-head{
+  font-size: 60px !important;
+  /* top: 56px; */
+  height: 134px;
+}
+.white{
+  color: #fff !important;
+}
+.details-section{
+  height: 339px;
+}
+.enquiry-form-details{
+  top: 16px !important;
 }
