@@ -569,119 +569,15 @@ var data = {
   <!-- end main-content -->
   
   <!-- Footer -->
-  <footer id="footer" class="footer divider layer-overlay overlay-dark-9" data-bg-img="images/bg/bg2.jpg">
-    <div class="container">
-      <div class="row border-bottom">
-        <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
-            <img class="mt-5 mb-20" alt="" src="images/logo-wide.png">
-            <p>Gyandeep College of Education, Imam Bari laheriyasarai, In front of kumar pharma, Near- Gayatri Mandir, Darbhanga,Bihar, Pin - 846001</p>
-            <ul class="list-inline mt-5">
-              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-color-2 mr-5"></i> <a class="text-gray" href="#">+91 7992356411
-</a> </li>
-              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-color-2 mr-5"></i> <a class="text-gray" href="#">contact@indiaadmission.in</a> </li>
-              <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-color-2 mr-5"></i> <a class="text-gray" href="#">http://indiaadmission.in</a> </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
-            <h4 class="widget-title">Useful Links</h4>
-            <ul class="list angle-double-right list-border">
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="#">Our Courses</a></li>
-              <li><a href="#">Course Fee</a></li>
-              <li><a href="page-gallery-3col.html">Gallery</a></li>
-              <li><a href="#">Affiliation</a></li>              
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
-              <h5 class="widget-title">Courses</h5>
-              <div class="tags">
-                <a href="#">BMLT</a>
-                <a href="#">Dresser</a>
-                <a href="#">Yoga</a>
-                <a href="#">CHW</a>
-                <a href="#">ANM</a>
-                <a href="#">BCA</a>
-                <a href="#">BBA</a>
-                <a href="#">BLISC</a>
-                <a href="#">GNM</a>
-                <a href="#">B.SC. Nursing</a>
-                <a href="#">DRIT</a>
-                <a href="#">DOTA</a>
-                <a href="#">DMLT</a>
-                <a href="#">B.ED</a>
-                <a href="#">D.El.Ed.</a>
-				<a href="#">ECG</a>
-				<a href="#">Ultrasound</a>
-				<a href="#">MLIS</a>
-				<a href="#">MCA</a>
-              </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
-            <h4 class="widget-title line-bottom-theme-colored-2">Quick Contact</h4>
-            <form id="quick_contact_form2" name="footer_quick_contact_form" class="quick-contact-form" action="http://html.kodesolution.live/s/studypress/v6.0/demo/includes/quickcontact.php" method="post">
-              <div class="form-group">
-                <input name="form_email" class="form-control" type="text" required="" placeholder="Enter Email">
-              </div>
-              <div class="form-group">
-                <textarea name="form_message" class="form-control" required="" placeholder="Enter Message" rows="3"></textarea>
-              </div>
-              <div class="form-group">
-                <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                <button type="submit" class="btn btn-default btn-flat btn-xs btn-quick-contact text-gray pt-5 pb-5" data-loading-text="Please wait...">Send Message</button>
-              </div>
-            </form>
-
-            <!-- Quick Contact Form Validation-->
-            <script type="text/javascript">
-              $("#quick_contact_form2").validate({
-                submitHandler: function(form) {
-                  var form_btn = $(form).find('button[type="submit"]');
-                  var form_result_div = '#form-result';
-                  $(form_result_div).remove();
-                  form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                  var form_btn_old_msg = form_btn.html();
-                  form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                  $(form).ajaxSubmit({
-                    dataType:  'json',
-                    success: function(data) {
-                      if( data.status == 'true' ) {
-                        $(form).find('.form-control').val('');
-                      }
-                      form_btn.prop('disabled', false).html(form_btn_old_msg);
-                      $(form_result_div).html(data.message).fadeIn('slow');
-                      setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
-                    }
-                  });
-                }
-              });
-            </script>
-          </div>
-        </div>
-      </div>
-    </div>
+ <footer id="footer" class="footer divider layer-overlay overlay-dark-9" data-bg-img="images/bg/bg2.jpg"> 
+  
     <div class="footer-bottom bg-black-333">
       <div class="container pt-20 pb-20">
         <div class="row">
           <div class="col-md-6">
-            <p class="font-11 text-black-777 m-0">Copyright &copy;2023 indiaadmission.in All Rights Reserved</p>
+            <p class="font-11 text-black-777 m-0">Copyright &copy;2023 Indiaadmission.in All Rights Reserved</p>
           </div>
-          <div class="col-md-6 text-right">
-            <div class="widget no-border m-0">
-              <ul class="list-inline sm-text-center mt-5 font-12">
-                <li>
-                  <a href="faq.html">FAQ</a>
-                </li>
-                <li>|</li>
-              </ul>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
