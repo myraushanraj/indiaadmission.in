@@ -6475,3 +6475,11 @@ blockquote p {
 .contact-form input{
   color: #000 !important;
 }
+@media only screen and (max-width: 600px){
+	.enquiry-form {
+    position: absolute;
+    top: 43px;
+    width: 410px;
+    right: 2px !important;
+}
+}
