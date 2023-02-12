@@ -6479,7 +6479,7 @@ blockquote p {
 	.enquiry-form {
     position: absolute;
     top: 43px;
-    width: 410px;
-    right: 2px !important;
+    width: 350px;
+    right: 0px !important;
 }
 }
